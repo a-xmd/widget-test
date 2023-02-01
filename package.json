@@ -4,12 +4,19 @@
   "version": "0.1.0",
   "scripts": {
     "test": "jest",
-    "start": "parcel"
+    "start": "parcel",
+    "build": "rm -rf dist && parcel build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "source": [
     "./src/pages/a/index.html",
     "./src/pages/b/index.html"
   ],
+  "targets": {
+    "default": {
+      "publicUrl": "/widgets/widget-test/"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
